@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
+
+  <title>Cody Perry's - Resume</title>
+
+  <!-- Load the page styles. -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="js/jQuery.js"></script>
+  <script src="js/helper.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
+  <link href='https://fonts.googleapis.com/css?family=Overlock:400,700italic' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  <div id="main">
+    <!-- Header Content -->
+    <div id="header" class="center-content clearfix">
+      <ul id="topContacts" class='flex-box'></ul>
+    </div>
+    <div style='clear: both;'></div>
+    <!-- Nav Menu -->
+    <nav>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Home</a></li>
+      </ul>
+    </nav>
+    <!-- Work Section -->
+    <div id="workExperience" class='gray'>
+      <h2>Work Experience</h2>
+    </div>
+    <hr>
+    <!-- Project Content -->
+    <div id="projects">
+      <h2>Projects</h2>
+    </div>
+    <hr>
+    <!-- Education Content -->
+    <div id="education" class='gray'>
+      <h2>Education</h2>
+    </div>
+    <hr>
+    <!-- Displays Map -->
+    <div id="mapDiv">
+      <h2>Where I've Lived and Worked</h2>
+    </div>
+    <!-- Contact and Footer Section -->
+    <div id="letsConnect" class='dark-gray'>
+      <h2 class='orange center-text'>Let's Connect</h2>
+        <ul id="footerContacts" class="flex-box">
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Loads JavaScript file into the page -->
+  <script src="js/resumeBuilder.js"></script>
+  <!-- Will Display nothing if a content section is empty -->
+  <script type="text/javascript">
+    
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.display = 'none';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'none';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.display = 'none';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'none';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('letsConnect').style.display = 'none';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
